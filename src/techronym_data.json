@@ -1,0 +1,66 @@
+[
+  {
+    "command": "redis-cli",
+    "description": "Open redis prompt"
+  },
+  {
+    "command": "redis-cli INFO",
+    "description": "Server Statistics"
+  },
+  {
+    "command": "KEYS pattern",
+    "description": "Get All keys matching the pattern"
+  },
+  {
+    "command": "EXISTS key",
+    "description": "Check if key exists"
+  },
+  {
+    "command": "SET key value",
+    "description": "Set value in key"
+  },
+  {
+    "command": "SETNX key value",
+    "description": "Set if not exist value in key"
+  },
+  {
+    "command": "APPEND key value",
+    "description": "Append a value to a key"
+  },
+  {
+    "command": "GET key",
+    "description": "Get value in key"
+  },
+  {
+    "command": "INCR key",
+    "description": "Increment value in key"
+  },
+  {
+    "command": "DECR key",
+    "description": "Decrement value in key"
+  },
+  {
+    "command": "DEL key",
+    "description": "Delete key"
+  },
+  {
+    "command": "TTL key",
+    "description": "Number of seconds until a key is deleted"
+  },
+  {
+    "command": "EXPIRE key seconds",
+    "description": "Set key TTL"
+  },
+  {
+    "command": "MSET key value [key value ...]",
+    "description": "Set multiple keys to multiple values"
+  },
+  {
+    "command": "CONFIG GET \\*",
+    "description": "List of all active configuration variables you can change"
+  },
+  {
+    "command": "FLUSHDB",
+    "description": "Drop the currently selected database"
+  }
+]
