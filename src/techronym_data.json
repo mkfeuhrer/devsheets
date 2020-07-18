@@ -57,7 +57,7 @@
   },
   {
     "command": "CONFIG GET \\*",
-    "description": "List of all active configuration variables you can change"
+    "description": "List of all active configuration variables you can change."
   },
   {
     "command": "FLUSHDB",

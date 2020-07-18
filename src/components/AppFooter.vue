@@ -3,7 +3,7 @@
     <div class="socialShare">
       <span class="socialIcons">
         <a
-          href="https://twitter.com/intent/tweet?url=https://mohitkhare.me/acrons&text=Find the most used acronyms.Check out Acrons by @mkfeuhrer"
+          href="https://twitter.com/intent/tweet?url=https://mohitkhare.me/devsheet&text=Find the cheatsheets for everything. Check out Devsheet by @mkfeuhrer"
           target="_blank"
         >
           <i style="color: #38A1F3" class="fab fa-2x fa-twitter" aria-hidden="true"></i>
@@ -11,7 +11,10 @@
       </span>
 
       <span class="socialIcons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=mohitkhare.me/acrons" target="_blank">
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=mohitkhare.me/devsheet"
+          target="_blank"
+        >
           <i class="fab fa-2x fa-facebook-f" aria-hidden="true" target="_blank"></i>
         </a>
       </span>
@@ -19,7 +22,7 @@
         <a
           target="_blank"
           style="color: #0e76a8;"
-          href="https://www.linkedin.com/shareArticle?mini=true&url=https://mohitkhare.me/acrons"
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https://mohitkhare.me/devsheet"
           onclick="window.open(this.href, 'width=550,height=435');return false;"
         >
           <i class="fab fa-2x fa-linkedin-in" aria-hidden="true"></i>

@@ -7,18 +7,15 @@
     <div class="searchResult" v-for="(value, index) in filteredList" :key="index">
       <div class="grid">
         <div class="grid-elem left" :class="{'grayHighlight': index % 2 !== 0 }">{{ value.command }}</div>
-        <div class="grid-elem">
-          <button v-show="!itemCopied" @click="copyItem(value.command)" class="btn copy">
-            <i class="far fa-copy"></i>
-          </button>
-          <button v-show="itemCopied" class="btn copy">
-            <i class="fa fa-done"></i>
-          </button>
-        </div>
         <div
           class="grid-elem right"
           :class="{'grayHighlight': index % 2 !== 0 }"
         >{{ value.description}}</div>
+        <div class="grid-elem">
+          <button @click="copyItem($event,value.command)" class="btn copy">
+            <i class="far fa-copy"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -27,12 +24,21 @@
 <script>
 import json from "../techronym_data.json";
 
+function copyText(text) {
+  var input = document.createElement("textarea");
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.select();
+  var result = document.execCommand("copy");
+  document.body.removeChild(input);
+  return result;
+}
+
 export default {
   name: "Section",
   data() {
     return {
       search: "",
-      itemCopied: false,
       acronymList: json
     };
   },
@@ -46,9 +52,16 @@ export default {
     }
   },
   methods: {
-    copyItem(value) {
-      console.log(value);
-      // Copy key to clipboard
+    copyItem(event, value) {
+      copyText(value);
+      var node = document.createElement("span");
+      var textnode = document.createTextNode("Copied");
+      node.appendChild(textnode);
+      node.setAttribute("style", "font-size: 15px; margin-left: 5px;");
+      event.target.parentNode.appendChild(node);
+      setTimeout(() => {
+        event.target.parentNode.removeChild(node);
+      }, 2000);
     }
   }
 };
@@ -79,7 +92,6 @@ export default {
   display: flex;
   width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 10px;
 }
@@ -106,6 +118,7 @@ export default {
   align-items: center;
   font-size: 16px;
   text-align: start;
+  line-height: 20px;
 }
 
 .left {
@@ -121,7 +134,13 @@ export default {
 }
 
 .copy {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 18px;
+  min-width: 100px;
   color: #b40000;
 }
 
