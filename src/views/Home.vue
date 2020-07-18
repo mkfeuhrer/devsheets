@@ -18,10 +18,14 @@
       </div>-->
 
       <div class="home">
-        <span @click="homeItemClicked()" v-show="itemSelected">
+        <button @click="homeItemClicked()" class="btn buttonSelection">
           <i class="fa fa-home"></i>
           Home
-        </span>
+        </button>
+        <button @click="openGithub()" class="btn buttonSelection">
+          <i class="fab fa-github"></i>
+          Contribute
+        </button>
       </div>
       <div v-show="!itemSelected" class="searchBox">
         <input type="search" v-model="search" placeholder="Search cheatsheets" />
@@ -46,6 +50,7 @@
           <OptionButton :id="value.id" @homeItemSelected="homeItemSelected" />
         </div>
       </div>
+      <hr />
       <Section v-show="itemSelected" :selectedType="this.selectedType" />
     </div>
     <AppFooter />
@@ -135,6 +140,10 @@ export default {
     },
     homeItemClicked() {
       this.itemSelected = false;
+    },
+    openGithub() {
+      open("https://github.com/mkfeuhrer/devsheets");
+      //   window.location.href = "https://github.com/mkfeuhrer/devsheets";
     }
   },
   components: {
@@ -149,7 +158,6 @@ export default {
 
 <style scoped>
 .parent {
-  margin: 10px;
 }
 
 .home span {
@@ -232,5 +240,29 @@ export default {
 
 .product-hunt {
   margin: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttonSelection {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+  border: 2px solid #b40000;
+}
+.buttonSelection:hover {
+  background-color: #b40000;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+}
+.buttonSelection:focus {
+  box-shadow: none;
 }
 </style>

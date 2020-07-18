@@ -119,7 +119,6 @@ export default {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   font-weight: bolder;
-  margin-top: 20px;
   line-height: 24px;
   color: #555;
 }
@@ -133,6 +132,8 @@ export default {
   font-size: 16px;
   text-align: start;
   line-height: 20px;
+  border: 1px solid #eee;
+  padding: 5px;
 }
 
 .left {

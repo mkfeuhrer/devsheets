@@ -33,7 +33,7 @@ export default {
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 500;
   color: #000;
   border: 2px solid #b40000;
 }
