@@ -1,9 +1,11 @@
 <template>
   <div>
+    <div class="heading">
+      <p>{{ capatalize(this.selectedType) }} Cheatsheet</p>
+    </div>
     <div class="searchBox">
       <input type="search" v-model="search" placeholder="Search this devsheet" />
     </div>
-    <div class="heading">BRANCHES</div>
     <div class="searchResult" v-for="(value, index) in filteredList" :key="index">
       <div class="grid">
         <div class="grid-elem left" :class="{'grayHighlight': index % 2 !== 0 }">{{ value.command }}</div>
@@ -38,13 +40,22 @@ export default {
   name: "Section",
   data() {
     return {
-      search: "",
-      acronymList: json
+      search: ""
     };
+  },
+  props: {
+    selectedType: String
   },
   computed: {
     filteredList() {
-      return this.acronymList
+      let cheatsheet = [];
+      for (let ind = 0; ind < json.length; ind++) {
+        console.log(this.selectedType);
+        if (json[ind].id == this.selectedType) {
+          cheatsheet = json[ind].cheatsheet;
+        }
+      }
+      return cheatsheet
         .filter(obj => {
           return obj.command.toLowerCase().includes(this.search.toLowerCase());
         })
@@ -62,6 +73,10 @@ export default {
       setTimeout(() => {
         event.target.parentNode.removeChild(node);
       }, 2000);
+    },
+    capatalize(value) {
+      if (typeof value !== "string") return "";
+      return value.charAt(0).toUpperCase() + value.slice(1);
     }
   }
 };
@@ -70,15 +85,16 @@ export default {
 <style scoped>
 .searchBox {
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .searchBox input {
   height: 40px;
-  width: 400px;
+  width: 50%;
+  min-width: 300px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
+  padding-right: 10px;
   border: 2px solid lightgray;
   border-radius: 5px;
 }
@@ -99,14 +115,12 @@ export default {
 .heading {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  background-color: #f7f7f7;
-  padding: 5px 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bolder;
-  margin: 10px 0px;
+  margin-top: 20px;
+  line-height: 24px;
   color: #555;
 }
 
@@ -124,8 +138,8 @@ export default {
 .left {
   width: 30%;
   font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  color: #ff0000;
+  font-weight: 500;
+  color: #c11000;
 }
 
 .right {
@@ -135,12 +149,12 @@ export default {
 
 .copy {
   display: flex;
+  min-width: 100px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   font-size: 18px;
-  min-width: 100px;
   color: #b40000;
 }
 

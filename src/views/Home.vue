@@ -2,16 +2,6 @@
   <div class="home container">
     <AppHeader />
     <div class="parent">
-      <div class="buttons">
-        <button @click="showPopular" class="btn buttonSelection">Popular</button>
-        <button @click="showAll" class="btn btn-outline-dark buttonSelection">Show me All</button>
-        <a
-          href="https://github.com/mkfeuhrer/acrons/issues"
-          class="btn buttonSelection"
-          target="blank"
-        >Contribute</a>
-      </div>
-
       <!-- <div class="product-hunt">
         <a
           href="https://www.producthunt.com/posts/acrons?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-acrons"
@@ -27,7 +17,36 @@
         </a>
       </div>-->
 
-      <Section />
+      <div class="home">
+        <span @click="homeItemClicked()" v-show="itemSelected">
+          <i class="fa fa-home"></i>
+          Home
+        </span>
+      </div>
+      <div v-show="!itemSelected" class="searchBox">
+        <input type="search" v-model="search" placeholder="Search cheatsheets" />
+      </div>
+      <div v-show="itemNotFound" class="contribute">
+        <p>
+          Couldn't find Cheatsheet?
+          <a
+            href="https://github.com/mkfeuhrer/devsheet"
+            class
+            target="blank"
+          >Contribute</a>
+        </p>
+      </div>
+      <div class="grid">
+        <div
+          class="grid-elem"
+          v-show="!itemSelected"
+          v-for="(value, index) in filteredList"
+          :key="index"
+        >
+          <OptionButton :id="value.id" @homeItemSelected="homeItemSelected" />
+        </div>
+      </div>
+      <Section v-show="itemSelected" :selectedType="this.selectedType" />
     </div>
     <AppFooter />
   </div>
@@ -38,6 +57,7 @@ import json from "../techronym_data.json";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import Section from "@/components/Section.vue";
+import OptionButton from "@/components/OptionButton.vue";
 
 export default {
   name: "Home",
@@ -45,6 +65,8 @@ export default {
     return {
       search: "",
       acronymList: json,
+      itemSelected: false,
+      selectedType: "",
       popular: false,
       popularList: [
         {
@@ -93,26 +115,33 @@ export default {
   },
   computed: {
     filteredList() {
+      if (this.acronymList == null) {
+        return [];
+      }
       return this.acronymList
         .filter(obj => {
-          return obj.command.toLowerCase().includes(this.search.toLowerCase());
+          return obj.id.toLowerCase().includes(this.search.toLowerCase());
         })
-        .sort((a, b) => (a.command > b.command ? 1 : -1));
+        .sort((a, b) => (a.id > b.id ? 1 : -1));
+    },
+    itemNotFound() {
+      return this.filteredList.length == 0;
     }
   },
   methods: {
-    showPopular() {
-      this.popular = true;
-      return this.popularList.sort((a, b) => (a.command > b.command ? 1 : -1));
+    homeItemSelected(value) {
+      this.itemSelected = true;
+      this.selectedType = value;
     },
-    showAll() {
-      this.popular = false;
+    homeItemClicked() {
+      this.itemSelected = false;
     }
   },
   components: {
     AppHeader,
     AppFooter,
-    Section
+    Section,
+    OptionButton
   }
 };
 </script>
@@ -122,6 +151,17 @@ export default {
 .parent {
   margin: 10px;
 }
+
+.home span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.home span:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #b40000;
+}
+
 .searchResult {
   margin: 20px;
 }
@@ -149,68 +189,47 @@ export default {
   outline: none !important;
   border: 2px solid #666;
 }
+
 .searchBox {
   margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 .searchBox input {
+  height: 40px;
+  width: 40%;
+  min-width: 300px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
 }
+
+.searchBox input:focus-within {
+  outline: none !important;
+  border: 2px solid #666;
+}
+
 .grid {
   display: flex;
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   padding-left: 10px;
 }
-.left {
-  width: 30%;
-  padding: 10px;
-  border: 1px solid black;
-  font-weight: bold;
-}
-.right {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid black;
-  font-weight: 500;
-}
+
 .grayHighlight {
   background-color: rgb(240, 240, 240);
 }
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.contribute p {
+  font-size: 16px;
+  color: #555;
 }
-.buttonSelection {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #000;
-  border: 2px solid #b40000;
-}
-.buttonSelection:hover {
-  background-color: #b40000;
-  font-weight: bold;
-  color: white;
-  border: 2px solid white;
-}
-.buttonSelection:focus {
-  box-shadow: none;
-}
-.contribute {
-  font-size: 18px;
-  margin-top: 20px;
-}
-.contribute a {
-  color: #000;
-  margin-top: 5px;
-  font-weight: bold;
-}
+
 .product-hunt {
   margin: 20px;
 }
