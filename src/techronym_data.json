@@ -70,352 +70,394 @@
     ]
   },
   {
-    "id": "redis",
+    "id": "git",
     "color": "#b40000",
     "cheatsheet": [
       {
-        "command": "redis-cli",
-        "description": "Open redis prompt"
+        "command": "git init",
+        "description": "Creates an empty Git repository in the specified directory."
       },
       {
-        "command": "redis-cli INFO",
-        "description": "Server Statistics"
+        "command": "git clone <repository name>",
+        "description": "Clones a repository located at <repository name> onto your local machine."
       },
       {
-        "command": "KEYS pattern",
-        "description": "Get All keys matching the pattern"
+        "command": "git add <directory>",
+        "description": "Stages only the specified changes for the next commit. Replace <directory> with a <file> to change a specific file."
       },
       {
-        "command": "EXISTS key",
-        "description": "Check if key exists"
+        "command": "git add .",
+        "description": "Stages new files and modifications without deletions"
       },
       {
-        "command": "SET key value",
-        "description": "Set value in key"
+        "command": "git add -A",
+        "description": "Stages all changes"
       },
       {
-        "command": "SETNX key value",
-        "description": "Set if not exist value in key"
+        "command": "git add -all",
+        "description": "Equivalent to git add -A"
       },
       {
-        "command": "APPEND key value",
-        "description": "Append a value to a key"
+        "command": "git add -u",
+        "description": "Stages modifications and deletions without adding new files"
       },
       {
-        "command": "GET key",
-        "description": "Get value in key"
+        "command": "git add --update",
+        "description": "Equivalent to git add -u"
       },
       {
-        "command": "INCR key",
-        "description": "Increment value in key"
+        "command": "git commit -m ”<message>”",
+        "description": "Commits the staged snapshot. replace <message> with the commit message."
       },
       {
-        "command": "DECR key",
-        "description": "Decrement value in key"
+        "command": "git status",
+        "description": "List which files are staged unstaged and untracked."
       },
       {
-        "command": "DEL key",
-        "description": "Delete key"
+        "command": "git log",
+        "description": "Displays the entire commit history using the default format."
       },
       {
-        "command": "TTL key",
-        "description": "Number of seconds until a key is deleted"
+        "command": "git diff",
+        "description": "Shows unstaged changes between your index and working directory."
       },
       {
-        "command": "EXPIRE key seconds",
-        "description": "Set key TTL"
+        "command": "git pull",
+        "description": "Fetchs the remote copy of the current branch."
       },
       {
-        "command": "MSET key value [key value ...]",
-        "description": "Set multiple keys to multiple values"
+        "command": "git pull --rebase <remote>",
+        "description": "Fetchs the remote copy of current branch and rebases it into the local copy. Use git rebase instead of merge to integrate the branches."
       },
       {
-        "command": "CONFIG GET \\*",
-        "description": "List of all active configuration variables you can change."
+        "command": "git push origin master",
+        "description": "Push all of your commits to master branch."
       },
       {
-        "command": "FLUSHDB",
-        "description": "Drop the currently selected database"
+        "command": "git push <remote> --all",
+        "description": "Push all of your local branches to the specified remote."
+      },
+      {
+        "command": "git push <remote> --tags",
+        "description": "Tags aren’t automatically pushed when you push a branch or use the --all flag. The --tags flag sends all of your local tags to the remote repo."
+      },
+      {
+        "command": "git push <remote> --force",
+        "description": "Forces the git push even if it results in a non-fast-forward merge. Do not use the --force flag unless you’re absolutely sure you know what you’re doing."
+      },
+      {
+        "command": "git revert <commit>",
+        "description": "Creates new commit that undoes all of the changes made in <commit> and then applys it to the current branch."
+      },
+      {
+        "command": "git reset <file>",
+        "description": "Removes <file> from the staging area but leaves the working directory unchanged - This unstages a file without overwriting any changes."
+      },
+      {
+        "command": "git clean -n",
+        "description": "Shows which files would be removed from working directory. Use the -f flag in place of the -n flag to execute the clean."
+      },
+      {
+        "command": "git commit --amend",
+        "description": "Replaces the last commit with the staged changes and last commit combined. Use with nothing staged to edit the last commit’s message."
+      },
+      {
+        "command": "git rebase <base>",
+        "description": "Rebase the current branch onto <base>. <base> can be a commit ID a branch name a tag or a relative reference to HEAD."
+      },
+      {
+        "command": "git reflog",
+        "description": "Show a log of changes to the local repository’s HEAD. Add --relative-date flag to show date info or --all to show all refs."
+      },
+      {
+        "command": "git branch",
+        "description": "Lists all of the branches in your repo."
+      },
+      {
+        "command": "git branch <branch name>",
+        "description": "Creates a new branch with the name <branch name>."
+      },
+      {
+        "command": "git checkout -b <branch name>",
+        "description": "Creates and check out a new branch named <branch name>."
+      },
+      {
+        "command": "git checkout <branch name>",
+        "description": "Checkout an existing branch."
+      },
+      {
+        "command": "git merge <branch>",
+        "description": "Merge <branch> into the current branch."
+      },
+      {
+        "command": "git remote add <name> <url>",
+        "description": "Creates a new connecti"
+      },
+      {
+        "command": "git log --stat",
+        "description": "Include which files were altered and the relative number of lineson to a remote repo. After adding a remote you can use <name> as a shortcut for <url> in other commands."
+      },
+      {
+        "command": "git fetch <remote> <branch>",
+        "description": "Fetches a specific <branch> from the repo. Leave off <branch> to fetch all remote refs."
+      },
+      {
+        "command": "git pull <remote>",
+        "description": "Fetches the specified remote’s copy of current branch and immediately merge it into the local copy."
+      },
+      {
+        "command": "git push <remote> <branch>",
+        "description": "Pushes the branch to <remote> along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist."
+      },
+      {
+        "command": "git config --global user.name <name>",
+        "description": "Defines the author name to be used for all commits by the current user."
+      },
+      {
+        "command": "git config --global user.email <email>",
+        "description": "Defines the author email to be used for all commits by the current user."
+      },
+      {
+        "command": "git config --global alias. <alias-name> <git-command>",
+        "description": "Creates shortcut for a Git command. E.g. alias.p push will set git p equivalent to git push."
+      },
+      {
+        "command": "git config --system core.editor <editor>",
+        "description": "Set text editor used by commands for all users on the machine. <editor> arg should be the command that launches the desired editor (e.g; vi)."
+      },
+      {
+        "command": "git config --global --edit",
+        "description": "Opens the global configuration file in a text editor for manual editing."
+      },
+      {
+        "command": "git log -<limit>",
+        "description": "Limits the number of git rebase -i E.g. git log -5 will limit to 5 commits."
+      },
+      {
+        "command": "git log --oneline",
+        "description": "Condenses each commit to a single line."
+      },
+      {
+        "command": "git log -p",
+        "description": "Displays the full diff of each commit."
+      },
+      {
+        "command": "git log --stat",
+        "description": "Include which files were altered and the relative number of lines that were added or deleted from each of them."
+      },
+      {
+        "command": "git log --author= ”<pattern>”",
+        "description": "Searchs for commits by a particular author."
+      },
+      {
+        "command": "git log --grep=”<pattern>”",
+        "description": "Searchs for commits with a commit message that matches <pattern>."
+      },
+      {
+        "command": "git log <since>..<until>",
+        "description": "Shows commits that occur between <since> and <until>. Args can be a any kind of revision reference."
+      },
+      {
+        "command": "git log -- <file>",
+        "description": "Only display commits that have the specified file."
+      },
+      {
+        "command": "git log --graph --decorate",
+        "description": "--graph flag draws a text based graph of commits on left side of commit msgs. --decorate adds names of branches or tags of commits shown."
+      },
+      {
+        "command": "git diff HEAD",
+        "description": "Shows difference between working directory and last commit."
+      },
+      {
+        "command": "git diff --cached",
+        "description": "Shows difference between staged changes and last commit"
+      },
+      {
+        "command": "git reset",
+        "description": "Resets the staging area to match most recent commit but leaves the working directory unchanged."
+      },
+      {
+        "command": "git reset --hard",
+        "description": "Resets the staging area and working directory to match most recent commit and overwrites all changes in the working directory."
+      },
+      {
+        "command": "git reset <commit>",
+        "description": "Moves the current branch tip backward to <commit> resets the staging area to match but leaves the working directory unchanged."
+      },
+      {
+        "command": "git reset --hard <commit>",
+        "description": "Same as previous but resets both the staging area & working directory to match. Deletes uncommitted changes and all commits after <commit>."
+      },
+      {
+        "command": "git rebase -i <base>",
+        "description": "Interactively rebase current branch onto <base>. Launches editor to enter commands for how each commit will be transferred to the new base."
       }
     ]
   },
   {
-    "id": "redis",
+    "id": "http Codes",
     "color": "#b40000",
     "cheatsheet": [
       {
-        "command": "redis-cli",
-        "description": "Open redis prompt"
+        "command": 100,
+        "description": "Continue"
       },
       {
-        "command": "redis-cli INFO",
-        "description": "Server Statistics"
+        "command": 101,
+        "description": "Switching Protocols"
       },
       {
-        "command": "KEYS pattern",
-        "description": "Get All keys matching the pattern"
+        "command": 200,
+        "description": "OK"
       },
       {
-        "command": "EXISTS key",
-        "description": "Check if key exists"
+        "command": 201,
+        "description": "Created"
       },
       {
-        "command": "SET key value",
-        "description": "Set value in key"
+        "command": 202,
+        "description": "Accepted"
       },
       {
-        "command": "SETNX key value",
-        "description": "Set if not exist value in key"
+        "command": 203,
+        "description": "Non-Authoritative Information"
       },
       {
-        "command": "APPEND key value",
-        "description": "Append a value to a key"
+        "command": 204,
+        "description": "No Content"
       },
       {
-        "command": "GET key",
-        "description": "Get value in key"
+        "command": 205,
+        "description": "Reset Content"
       },
       {
-        "command": "INCR key",
-        "description": "Increment value in key"
+        "command": 206,
+        "description": "Partial Content"
       },
       {
-        "command": "DECR key",
-        "description": "Decrement value in key"
+        "command": 300,
+        "description": "Multiple Choices"
       },
       {
-        "command": "DEL key",
-        "description": "Delete key"
+        "command": 301,
+        "description": "Moved Permanently"
       },
       {
-        "command": "TTL key",
-        "description": "Number of seconds until a key is deleted"
+        "command": 302,
+        "description": "Found"
       },
       {
-        "command": "EXPIRE key seconds",
-        "description": "Set key TTL"
+        "command": 303,
+        "description": "See Other"
       },
       {
-        "command": "MSET key value [key value ...]",
-        "description": "Set multiple keys to multiple values"
+        "command": 304,
+        "description": "Not Modified"
       },
       {
-        "command": "CONFIG GET \\*",
-        "description": "List of all active configuration variables you can change."
+        "command": 305,
+        "description": "Use Proxy"
       },
       {
-        "command": "FLUSHDB",
-        "description": "Drop the currently selected database"
-      }
-    ]
-  },
-  {
-    "id": "redis",
-    "color": "#b40000",
-    "cheatsheet": [
-      {
-        "command": "redis-cli",
-        "description": "Open redis prompt"
+        "command": 307,
+        "description": "Temporary Redirect"
       },
       {
-        "command": "redis-cli INFO",
-        "description": "Server Statistics"
+        "command": 400,
+        "description": "Bad Request"
       },
       {
-        "command": "KEYS pattern",
-        "description": "Get All keys matching the pattern"
+        "command": 401,
+        "description": "Unauthorized"
       },
       {
-        "command": "EXISTS key",
-        "description": "Check if key exists"
+        "command": 402,
+        "description": "Payment Required"
       },
       {
-        "command": "SET key value",
-        "description": "Set value in key"
+        "command": 403,
+        "description": "Forbidden"
       },
       {
-        "command": "SETNX key value",
-        "description": "Set if not exist value in key"
+        "command": 404,
+        "description": "Not Found"
       },
       {
-        "command": "APPEND key value",
-        "description": "Append a value to a key"
+        "command": 405,
+        "description": "Method Not Allowed"
       },
       {
-        "command": "GET key",
-        "description": "Get value in key"
+        "command": 406,
+        "description": "Not Acceptable"
       },
       {
-        "command": "INCR key",
-        "description": "Increment value in key"
+        "command": 407,
+        "description": "Proxy Authentication Required"
       },
       {
-        "command": "DECR key",
-        "description": "Decrement value in key"
+        "command": 408,
+        "description": "Request Timeout"
       },
       {
-        "command": "DEL key",
-        "description": "Delete key"
+        "command": 409,
+        "description": "Conflict"
       },
       {
-        "command": "TTL key",
-        "description": "Number of seconds until a key is deleted"
+        "command": 410,
+        "description": "Gone"
       },
       {
-        "command": "EXPIRE key seconds",
-        "description": "Set key TTL"
+        "command": 411,
+        "description": "Length Required"
       },
       {
-        "command": "MSET key value [key value ...]",
-        "description": "Set multiple keys to multiple values"
+        "command": 412,
+        "description": "Precondition Failed"
       },
       {
-        "command": "CONFIG GET \\*",
-        "description": "List of all active configuration variables you can change."
+        "command": 413,
+        "description": "Request Entity Too Large"
       },
       {
-        "command": "FLUSHDB",
-        "description": "Drop the currently selected database"
-      }
-    ]
-  },
-  {
-    "id": "redis",
-    "color": "#b40000",
-    "cheatsheet": [
-      {
-        "command": "redis-cli",
-        "description": "Open redis prompt"
+        "command": 414,
+        "description": "Request-URI Too Long"
       },
       {
-        "command": "redis-cli INFO",
-        "description": "Server Statistics"
+        "command": 415,
+        "description": "Unsupported Media Type"
       },
       {
-        "command": "KEYS pattern",
-        "description": "Get All keys matching the pattern"
+        "command": 416,
+        "description": "Requested Range Not Satisfiable"
       },
       {
-        "command": "EXISTS key",
-        "description": "Check if key exists"
+        "command": 417,
+        "description": "Expectation Failed"
       },
       {
-        "command": "SET key value",
-        "description": "Set value in key"
+        "command": 500,
+        "description": "Internal Server Error"
       },
       {
-        "command": "SETNX key value",
-        "description": "Set if not exist value in key"
+        "command": 501,
+        "description": "Not Implemented"
       },
       {
-        "command": "APPEND key value",
-        "description": "Append a value to a key"
+        "command": 502,
+        "description": "Bad Gateway"
       },
       {
-        "command": "GET key",
-        "description": "Get value in key"
+        "command": 503,
+        "description": "Service Unavailable"
       },
       {
-        "command": "INCR key",
-        "description": "Increment value in key"
+        "command": 504,
+        "description": "Gateway Timeout"
       },
       {
-        "command": "DECR key",
-        "description": "Decrement value in key"
-      },
-      {
-        "command": "DEL key",
-        "description": "Delete key"
-      },
-      {
-        "command": "TTL key",
-        "description": "Number of seconds until a key is deleted"
-      },
-      {
-        "command": "EXPIRE key seconds",
-        "description": "Set key TTL"
-      },
-      {
-        "command": "MSET key value [key value ...]",
-        "description": "Set multiple keys to multiple values"
-      },
-      {
-        "command": "CONFIG GET \\*",
-        "description": "List of all active configuration variables you can change."
-      },
-      {
-        "command": "FLUSHDB",
-        "description": "Drop the currently selected database"
-      }
-    ]
-  },
-  {
-    "id": "redis",
-    "color": "#b40000",
-    "cheatsheet": [
-      {
-        "command": "redis-cli",
-        "description": "Open redis prompt"
-      },
-      {
-        "command": "redis-cli INFO",
-        "description": "Server Statistics"
-      },
-      {
-        "command": "KEYS pattern",
-        "description": "Get All keys matching the pattern"
-      },
-      {
-        "command": "EXISTS key",
-        "description": "Check if key exists"
-      },
-      {
-        "command": "SET key value",
-        "description": "Set value in key"
-      },
-      {
-        "command": "SETNX key value",
-        "description": "Set if not exist value in key"
-      },
-      {
-        "command": "APPEND key value",
-        "description": "Append a value to a key"
-      },
-      {
-        "command": "GET key",
-        "description": "Get value in key"
-      },
-      {
-        "command": "INCR key",
-        "description": "Increment value in key"
-      },
-      {
-        "command": "DECR key",
-        "description": "Decrement value in key"
-      },
-      {
-        "command": "DEL key",
-        "description": "Delete key"
-      },
-      {
-        "command": "TTL key",
-        "description": "Number of seconds until a key is deleted"
-      },
-      {
-        "command": "EXPIRE key seconds",
-        "description": "Set key TTL"
-      },
-      {
-        "command": "MSET key value [key value ...]",
-        "description": "Set multiple keys to multiple values"
-      },
-      {
-        "command": "CONFIG GET \\*",
-        "description": "List of all active configuration variables you can change."
-      },
-      {
-        "command": "FLUSHDB",
-        "description": "Drop the currently selected database"
+        "command": 505,
+        "description": "HTTP Version Not Supported"
       }
     ]
   }

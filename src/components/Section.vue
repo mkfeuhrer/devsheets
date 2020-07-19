@@ -57,7 +57,10 @@ export default {
       }
       return cheatsheet
         .filter(obj => {
-          return obj.command.toLowerCase().includes(this.search.toLowerCase());
+          return obj.command
+            .toString()
+            .toLowerCase()
+            .includes(this.search.toLowerCase());
         })
         .sort((a, b) => (a.command > b.command ? 1 : -1));
     }
