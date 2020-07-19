@@ -2,6 +2,9 @@
   {
     "id": "redis",
     "color": "#b40000",
+    "description": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker",
+    "url": "https://redis.io/",
+    "tags": ["database", "sql"],
     "cheatsheet": [
       {
         "command": "redis-cli",
@@ -72,6 +75,9 @@
   {
     "id": "git",
     "color": "#b40000",
+    "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency",
+    "url": "https://git-scm.com/",
+    "tags": ["codebase"],
     "cheatsheet": [
       {
         "command": "git init",
@@ -298,6 +304,9 @@
   {
     "id": "http Codes",
     "color": "#b40000",
+    "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency",
+    "url": "https://git-scm.com/",
+    "tags": ["web"],
     "cheatsheet": [
       {
         "command": 100,

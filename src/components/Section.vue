@@ -136,19 +136,18 @@ export default {
   text-align: start;
   line-height: 20px;
   border: 1px solid #eee;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
+  margin: 2px;
 }
 
 .left {
   width: 30%;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 500;
+  font-weight: 600;
   color: #c11000;
 }
 
 .right {
   width: 60%;
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 .copy {

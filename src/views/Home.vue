@@ -47,7 +47,7 @@
           v-for="(value, index) in filteredList"
           :key="index"
         >
-          <OptionButton :id="value.id" @homeItemSelected="homeItemSelected" />
+          <OptionButton :data="value" @homeItemSelected="homeItemSelected" />
         </div>
       </div>
       <hr />
@@ -226,7 +226,6 @@ export default {
 }
 
 .grid {
-  width: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

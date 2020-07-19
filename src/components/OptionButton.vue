@@ -1,6 +1,16 @@
 <template>
   <div class="buttons">
-    <button @click="homeItemSelected" class="btn buttonSelection">{{capatalize(this.id)}}</button>
+    <p class="heading">{{capatalize(this.data.id)}}</p>
+    <p>{{shortenDescription(this.data.description)}}</p>
+    <div class="tag-section">
+      <div class="tag" v-for="(tag, index) in this.data.tags" :key="index">
+        <span>#{{tag}}</span>
+      </div>
+    </div>
+    <div class="links">
+      <button @click="homeItemSelected" class="btn buttonSelection">Cheatsheet</button>
+      <button @click="openDocs()" class="btn buttonSelection">Documentation</button>
+    </div>
   </div>
 </template>
 
@@ -8,7 +18,7 @@
 export default {
   name: "OptionButton",
   props: {
-    id: String
+    data: Object
   },
   methods: {
     capatalize(value) {
@@ -16,7 +26,15 @@ export default {
       return value.charAt(0).toUpperCase() + value.slice(1);
     },
     homeItemSelected() {
-      this.$emit("homeItemSelected", this.id);
+      this.$emit("homeItemSelected", this.data.id);
+    },
+    shortenDescription(value) {
+      if (value == null) return "";
+      if (value.length > 90) return value.substring(0, 90) + " ....";
+      else return value;
+    },
+    openDocs() {
+      window.open(this.data.url + "?ref=devsheets", "_blank");
     }
   }
 };
@@ -24,10 +42,65 @@ export default {
 
 <style scoped>
 .buttons {
+  width: 300px;
+  height: auto;
+  background-color: #fff1f1;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.buttons:hover {
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translateY(-3%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.buttons .heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buttons p {
+  margin: 5px;
+}
+
+.tag-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tag {
+  margin: 5px;
+  padding: 2px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px dashed black;
+  background-color: #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .buttonSelection {
   margin-left: 10px;
   margin-right: 10px;
