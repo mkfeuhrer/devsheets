@@ -156,12 +156,12 @@ export default {
   justify-content: flex-start;
   align-items: center;
   font-size: 18px;
-  color: #b40000;
+  color: #cc0000ea;
 }
 
 .copy:hover {
   transform: scale(1.1, 1.1);
-  color: #b40000;
+  color: #cc0000ea;
 }
 
 .grid-elem button:active {

@@ -158,6 +158,11 @@ export default {
 
 <style scoped>
 .parent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .home span {
@@ -221,6 +226,7 @@ export default {
 }
 
 .grid {
+  width: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -252,16 +258,23 @@ export default {
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-weight: 500;
-  color: #333;
-  border: 2px solid #b40000;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #cc0000ea;
+  color: white;
 }
 .buttonSelection:hover {
-  background-color: #b40000;
-  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-weight: bold;
-  border: 2px solid white;
+  font-size: 15px;
+  background-color: white;
+  color: #cc0000ea;
+  border: 1px solid #cc0000ea;
 }
+
 .buttonSelection:focus {
   box-shadow: none;
 }
