@@ -44,7 +44,7 @@ export default {
 .buttons {
   width: 300px;
   height: auto;
-  background-color: #fff1f1;
+  background-color: #fff5f5;
   border: 2px solid black;
   margin: 10px;
   padding: 10px;
