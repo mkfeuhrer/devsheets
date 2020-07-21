@@ -302,10 +302,10 @@
     ]
   },
   {
-    "id": "http Codes",
+    "id": "HTTP Codes",
     "color": "#b40000",
-    "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency",
-    "url": "https://git-scm.com/",
+    "description": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Status codes are issued by a server in response to a client's request made to the server.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
     "tags": ["web"],
     "cheatsheet": [
       {
@@ -467,6 +467,519 @@
       {
         "command": 505,
         "description": "HTTP Version Not Supported"
+      }
+    ]
+  },
+  {
+    "id": "Vim",
+    "color": "#b40000",
+    "description": "Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as 'vi' with most UNIX systems and with Apple OS X",
+    "url": "https://www.vim.org/",
+    "tags": ["editors", "terminals"],
+    "cheatsheet": [
+      {
+        "command": ":help keyword",
+        "description": "open help for keyword"
+      },
+      {
+        "command": ":o file",
+        "description": "open file"
+      },
+      {
+        "command": ":saveas file",
+        "description": "save file as"
+      },
+      {
+        "command": ":close",
+        "description": "close current pane"
+      },
+      {
+        "command": "h",
+        "description": "move cursor left"
+      },
+      {
+        "command": "j",
+        "description": "move cursor down"
+      },
+      {
+        "command": "k",
+        "description": "move cursor up"
+      },
+      {
+        "command": "l",
+        "description": "move cursor right"
+      },
+      {
+        "command": "H",
+        "description": "move to top of screen"
+      },
+      {
+        "command": "M",
+        "description": "move to middle of screen"
+      },
+      {
+        "command": "L",
+        "description": "move to bottom of screen"
+      },
+      {
+        "command": "w",
+        "description": "jump forwards to the start of a word"
+      },
+      {
+        "command": "W",
+        "description": "jump forwards to the start of a word (words can contain punctuation)"
+      },
+      {
+        "command": "e",
+        "description": "jump forwards to the end of a word"
+      },
+      {
+        "command": "E",
+        "description": "jump forwards to the end of a word (words can contain punctuation)"
+      },
+      {
+        "command": "b",
+        "description": "jump backwards to the start of a word"
+      },
+      {
+        "command": "B",
+        "description": "jump backwards to the start of a word (words can contain punctuation)"
+      },
+      {
+        "command": 0,
+        "description": "jump to the start of the line"
+      },
+      {
+        "command": "^",
+        "description": "jump to the first non-blank character of the line"
+      },
+      {
+        "command": "$",
+        "description": "jump to the end of the line"
+      },
+      {
+        "command": "g_",
+        "description": "jump to the last non-blank character of the line"
+      },
+      {
+        "command": "gg",
+        "description": "go to the first line of the document"
+      },
+      {
+        "command": "G",
+        "description": "go to the last line of the document"
+      },
+      {
+        "command": "5G",
+        "description": "go to line 5"
+      },
+      {
+        "command": "fx",
+        "description": "jump to next occurrence of character x"
+      },
+      {
+        "command": "tx",
+        "description": "jump to before next occurrence of character x"
+      },
+      {
+        "command": "}",
+        "description": "jump to next paragraph (or function/block"
+      },
+      {
+        "command": "{",
+        "description": "jump to previous paragraph (or function/block"
+      },
+      {
+        "command": "zz",
+        "description": "center cursor on screen"
+      },
+      {
+        "command": "Ctrl + b",
+        "description": "move back one full screen"
+      },
+      {
+        "command": "Ctrl + f",
+        "description": "move forward one full screen"
+      },
+      {
+        "command": "Ctrl + d",
+        "description": "move forward 1/2 a screen"
+      },
+      {
+        "command": "Ctrl + u",
+        "description": "move back 1/2 a screen"
+      },
+      {
+        "command": "i",
+        "description": "insert before the cursor"
+      },
+      {
+        "command": "I",
+        "description": "insert at the beginning of the line"
+      },
+      {
+        "command": "a",
+        "description": "insert (append) after the cursor"
+      },
+      {
+        "command": "A",
+        "description": "insert (append) at the end of the line"
+      },
+      {
+        "command": "o",
+        "description": "append (open) a new line below the current line"
+      },
+      {
+        "command": "O",
+        "description": "append (open) a new line above the current line"
+      },
+      {
+        "command": "ea",
+        "description": "insert (append) at the end of the word"
+      },
+      {
+        "command": "Esc",
+        "description": "exit insert mode"
+      },
+      {
+        "command": "r",
+        "description": "replace a single character"
+      },
+      {
+        "command": "J",
+        "description": "join line below to the current one"
+      },
+      {
+        "command": "cc",
+        "description": "change (replace) entire line"
+      },
+      {
+        "command": "cw",
+        "description": "change (replace) to the start of the next word"
+      },
+      {
+        "command": "ce",
+        "description": "change (replace) to the end of the next word"
+      },
+      {
+        "command": "cb",
+        "description": "change (replace) to the start of the previous word"
+      },
+      {
+        "command": "c0",
+        "description": "change (replace) to the start of the line"
+      },
+      {
+        "command": "c$",
+        "description": "change (replace) to the end of the line"
+      },
+      {
+        "command": "s",
+        "description": "delete character and substitute text"
+      },
+      {
+        "command": "S",
+        "description": "delete line and substitute text (same as cc)"
+      },
+      {
+        "command": "xp",
+        "description": "transpose two letters (delete and paste)"
+      },
+      {
+        "command": ".",
+        "description": "repeat last command"
+      },
+      {
+        "command": "u",
+        "description": "undo"
+      },
+      {
+        "command": "Ctrl + r",
+        "description": "redo"
+      },
+      {
+        "command": "v",
+        "description": "start visual mode"
+      },
+      {
+        "command": "V",
+        "description": "start linewise visual mode"
+      },
+      {
+        "command": "o",
+        "description": "move to other end of marked area"
+      },
+      {
+        "command": "O",
+        "description": "move to other corner of block"
+      },
+      {
+        "command": "aw",
+        "description": "mark a word"
+      },
+      {
+        "command": "ab",
+        "description": "a block with ()"
+      },
+      {
+        "command": "aB",
+        "description": "a block with {}"
+      },
+      {
+        "command": "ib",
+        "description": "inner block with ()"
+      },
+      {
+        "command": "iB",
+        "description": "inner block with {}"
+      },
+      {
+        "command": "Esc",
+        "description": "exit visual mode"
+      },
+      {
+        "command": "Ctrl + v",
+        "description": "start visual block mode"
+      },
+      {
+        "command": ">",
+        "description": "shift text right"
+      },
+      {
+        "command": "<",
+        "description": "shift text left"
+      },
+      {
+        "command": "y",
+        "description": "yank (copy) marked text"
+      },
+      {
+        "command": "d",
+        "description": "delete marked text"
+      },
+      {
+        "command": "~",
+        "description": "switch case"
+      },
+      {
+        "command": "yy",
+        "description": "yank (copy) a line"
+      },
+      {
+        "command": "2yy",
+        "description": "yank (copy) 2 lines"
+      },
+      {
+        "command": "yw",
+        "description": "yank (copy) the characters of the word from the cursor position to the start of the next word"
+      },
+      {
+        "command": "y$",
+        "description": "yank (copy) to end of line"
+      },
+      {
+        "command": "p",
+        "description": "put (paste) the clipboard after cursor"
+      },
+      {
+        "command": "P",
+        "description": "put (paste) before cursor"
+      },
+      {
+        "command": "dd",
+        "description": "delete (cut) a line"
+      },
+      {
+        "command": "2dd",
+        "description": "delete (cut) 2 lines"
+      },
+      {
+        "command": "dw",
+        "description": "delete (cut) the characters of the word from the cursor position to the start of the next word"
+      },
+      {
+        "command": "D",
+        "description": "delete (cut) to the end of the line"
+      },
+      {
+        "command": "d$",
+        "description": "delete (cut) to the end of the line"
+      },
+      {
+        "command": "d^",
+        "description": "delete (cut) to the first non-blank character of the line"
+      },
+      {
+        "command": "d0",
+        "description": "delete (cut) to the begining of the line"
+      },
+      {
+        "command": "x",
+        "description": "delete (cut) character"
+      },
+      {
+        "command": "/pattern",
+        "description": "search for pattern"
+      },
+      {
+        "command": "?pattern",
+        "description": "search backward for pattern"
+      },
+      {
+        "command": "\\vpattern",
+        "description": "'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)"
+      },
+      {
+        "command": "n",
+        "description": "repeat search in same direction"
+      },
+      {
+        "command": "N",
+        "description": "repeat search in opposite direction"
+      },
+      {
+        "command": ":%s/old/new/g",
+        "description": "replace all old with new throughout file"
+      },
+      {
+        "command": ":%s/old/new/gc",
+        "description": "replace all old with new throughout file with confirmations"
+      },
+      {
+        "command": ":noh",
+        "description": "remove highlighting of search matches"
+      },
+      {
+        "command": ":vimgrep /pattern/ {file}",
+        "description": "search for pattern in multiple files"
+      },
+      {
+        "command": ":cn",
+        "description": "jump to the next match"
+      },
+      {
+        "command": ":cp",
+        "description": "jump to the previous match"
+      },
+      {
+        "command": ":copen",
+        "description": "open a window containing the list of matches"
+      },
+      {
+        "command": ":w",
+        "description": "write (save) the file"
+      },
+      {
+        "command": ":w !sudo tee %",
+        "description": "write out the current file using sudo"
+      },
+      {
+        "command": ":wq or :x or ZZ",
+        "description": "write (save) and quit"
+      },
+      {
+        "command": ":q",
+        "description": "quit (fails if there are unsaved changes)"
+      },
+      {
+        "command": ":q! or ZQ",
+        "description": "quit and throw away unsaved changes"
+      },
+      {
+        "command": ":e file",
+        "description": "edit a file in a new buffer"
+      },
+      {
+        "command": ":bnext or :bn",
+        "description": "go to the next buffer"
+      },
+      {
+        "command": ":bprev or :bp",
+        "description": "go to the previous buffer"
+      },
+      {
+        "command": ":bd",
+        "description": "delete a buffer (close a file)"
+      },
+      {
+        "command": ":ls",
+        "description": "list all open buffers"
+      },
+      {
+        "command": ":sp file",
+        "description": "open a file in a new buffer and split window"
+      },
+      {
+        "command": ":vsp file",
+        "description": "open a file in a new buffer and vertically split window"
+      },
+      {
+        "command": "Ctrl + ws",
+        "description": "split window"
+      },
+      {
+        "command": "Ctrl + ww",
+        "description": "switch windows"
+      },
+      {
+        "command": "Ctrl + wq",
+        "description": "quit a window"
+      },
+      {
+        "command": "Ctrl + wv",
+        "description": "split window vertically"
+      },
+      {
+        "command": "Ctrl + wh",
+        "description": "move cursor to the left window (vertical split)"
+      },
+      {
+        "command": "Ctrl + wl",
+        "description": "move cursor to the right window (vertical split)"
+      },
+      {
+        "command": "Ctrl + wj",
+        "description": "move cursor to the window below (horizontal split)"
+      },
+      {
+        "command": "Ctrl + wk",
+        "description": "move cursor to the window above (horizontal split)"
+      },
+      {
+        "command": ":tabnew or :tabnew file",
+        "description": "open a file in a new tab"
+      },
+      {
+        "command": "Ctrl + wT",
+        "description": "move the current split window into its own tab"
+      },
+      {
+        "command": "gt or :tabnext or :tabn",
+        "description": "move to the next tab"
+      },
+      {
+        "command": "gT or :tabprev or :tabp",
+        "description": "move to the previous tab"
+      },
+      {
+        "command": "<number>gt",
+        "description": "move to tab <number>"
+      },
+      {
+        "command": ":tabmove <number>",
+        "description": "move current tab to the <number>th position (indexed from 0)"
+      },
+      {
+        "command": ":tabclose or :tabc",
+        "description": "close the current tab and all its windows"
+      },
+      {
+        "command": ":tabonly or :tabo",
+        "description": "close all tabs except for the current one"
+      },
+      {
+        "command": ":tabdo command",
+        "description": "run the command on all tabs (e.g. :tabdo q - closes all opened tabs)"
       }
     ]
   }
