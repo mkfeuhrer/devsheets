@@ -18,7 +18,7 @@
 export default {
   name: "OptionButton",
   props: {
-    data: Object
+    data: Object,
   },
   methods: {
     capatalize(value) {
@@ -35,8 +35,8 @@ export default {
     },
     openDocs() {
       window.open(this.data.url + "?ref=devsheets", "_blank");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -44,8 +44,7 @@ export default {
 .buttons {
   width: 300px;
   height: auto;
-  background-color: #fff5f5;
-  border: 2px solid black;
+  border: 2px solid gray;
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -53,6 +52,7 @@ export default {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  box-shadow: -5px 5px 10px #aaa;
 }
 
 .buttons:hover {

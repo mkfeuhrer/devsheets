@@ -6,6 +6,13 @@
     <div class="searchBox">
       <input type="search" v-model="search" placeholder="Search this devsheet" />
     </div>
+    <div v-show="filteredList.length > 0">
+      <div class="grid">
+        <div class="grid-elem left" style="font-weight: bold; color: #000;">Command</div>
+        <div class="grid-elem right" style="font-weight: bold;">Description</div>
+        <div class="grid-elem" style="font-weight: bold; min-width:100px; width:10%">Copy</div>
+      </div>
+    </div>
     <div class="searchResult" v-for="(value, index) in filteredList" :key="index">
       <div class="grid">
         <div class="grid-elem left" :class="{'grayHighlight': index % 2 !== 0 }">{{ value.command }}</div>
@@ -40,11 +47,11 @@ export default {
   name: "Section",
   data() {
     return {
-      search: ""
+      search: "",
     };
   },
   props: {
-    selectedType: String
+    selectedType: String,
   },
   computed: {
     filteredList() {
@@ -56,14 +63,14 @@ export default {
         }
       }
       return cheatsheet
-        .filter(obj => {
+        .filter((obj) => {
           return obj.command
             .toString()
             .toLowerCase()
             .includes(this.search.toLowerCase());
         })
         .sort((a, b) => (a.command > b.command ? 1 : -1));
-    }
+    },
   },
   methods: {
     copyItem(event, value) {
@@ -80,8 +87,8 @@ export default {
     capatalize(value) {
       if (typeof value !== "string") return "";
       return value.charAt(0).toUpperCase() + value.slice(1);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -135,7 +142,7 @@ export default {
   font-size: 16px;
   text-align: start;
   line-height: 20px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   padding: 5px 5px 5px 10px;
   margin: 2px;
 }

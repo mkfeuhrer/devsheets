@@ -982,5 +982,130 @@
         "description": "run the command on all tabs (e.g. :tabdo q - closes all opened tabs)"
       }
     ]
+  },
+  {
+    "id": "Docker",
+    "color": "#b40000",
+    "description": "Docker is a software platform for building applications based on containers — small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.",
+    "url": "https://www.docker.com/",
+    "tags": ["devops", "cloud"],
+    "cheatsheet": [
+      {
+        "command": "docker run <image-name>",
+        "description": "Creates a container and runs it"
+      },
+      {
+        "command": "docker create <image name>",
+        "description": "Creates a container from given image and returns the container id"
+      },
+      {
+        "command": "docker start <container id>",
+        "description": "Starts a container by given id of a already created command."
+      },
+      {
+        "command": "docker ps -a",
+        "description": "List of all the containers"
+      },
+      {
+        "command": "docker ps",
+        "description": "List of running containers"
+      },
+      {
+        "command": "docker restart <container id>",
+        "description": "Kills the container and start it."
+      },
+      {
+        "command": "docker rm <container id>",
+        "description": "Remove a container"
+      },
+      {
+        "command": "docker system prune",
+        "description": "Clean up all docker objects like container"
+      },
+      {
+        "command": "docker run -it <image name>",
+        "description": "Creates a container and runs it in interactive mode"
+      },
+      {
+        "command": "docker run <image name> <arguments>",
+        "description": "Runs a container and returns output based on argument. Eg. docker run ubuntu pwd"
+      },
+      {
+        "command": "docker run -d <image name>",
+        "description": "Run a container in detached mode(background)"
+      },
+      {
+        "command": "docker exec <container id> <command>",
+        "description": "Execute command inside a container. Use `-it` if you want it interactive"
+      },
+      {
+        "command": "docker logs <container id>",
+        "description": "Fetches logs on running container"
+      },
+      {
+        "command": "docker logs -f <container id>",
+        "description": "Fetches real-time logs on running container"
+      },
+      {
+        "command": "docker stop <container id>",
+        "description": "Stops a container gracefully(SIGTERM"
+      },
+      {
+        "command": "docker kill <container id>",
+        "description": "Stops a container immediately(SIGKILL)"
+      },
+      {
+        "command": "docker run -p <host port:container port> <image name>",
+        "description": "Access a port that is inside a container and map it to another port"
+      },
+      {
+        "command": "docker build <build context>",
+        "description": "Looks for `Dockerfile` in this directory and runs it. This builds the image"
+      },
+      {
+        "command": "docker build -f <custom dockerfile> <context>",
+        "description": "Build from custom dockerfile"
+      },
+      {
+        "command": "docker login -u <your docker id>  --password <your docker password>",
+        "description": "Login to docker hub"
+      },
+      {
+        "command": "docker push <your docker id>/<image tag with version>",
+        "description": "Push image to docker hub"
+      },
+      {
+        "command": "docker-compose up",
+        "description": "Runs a docker compose file"
+      },
+      {
+        "command": "docker-compose up -d",
+        "description": "Runs docker compose in detached mode"
+      },
+      {
+        "command": "docker-compose ps",
+        "description": "List containers which are part of current application"
+      },
+      {
+        "command": "docker-compose exec <service name> <command>",
+        "description": "Executing commands inside a service"
+      },
+      {
+        "command": "docker-compose logs <service name>",
+        "description": "Retrieve logs from running service"
+      },
+      {
+        "command": "docker-compose stop",
+        "description": "Stop the running services gracefully"
+      },
+      {
+        "command": "docker-compose kill",
+        "description": "Stops the running services immediately"
+      },
+      {
+        "command": "docker-compose down",
+        "description": "Stop the running services gracefully and remove the containers later."
+      }
+    ]
   }
 ]
