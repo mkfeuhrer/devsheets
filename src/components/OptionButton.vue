@@ -33,7 +33,7 @@ export default {
     },
     shortenDescription(value) {
       if (value == null) return "";
-      if (value.length > 90) return value.substring(0, 90) + " ....";
+      if (value.length > 90) return value.substring(0, 90) + " ...";
       else return value;
     },
     openDocs() {

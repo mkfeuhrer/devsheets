@@ -10,16 +10,17 @@ import Home from "./views/Home.vue";
 export default {
   name: "App",
   components: {
-    Home
-  }
+    Home,
+  },
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
 
 #app {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Recursive", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
