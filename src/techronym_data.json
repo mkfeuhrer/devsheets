@@ -2,6 +2,7 @@
   {
     "id": "redis",
     "color": "#b40000",
+    "image": "redis.png",
     "description": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker",
     "url": "https://redis.io/",
     "tags": ["database", "sql"],
@@ -75,6 +76,7 @@
   {
     "id": "git",
     "color": "#b40000",
+    "image": "git.png",
     "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency",
     "url": "https://git-scm.com/",
     "tags": ["codebase"],
@@ -304,6 +306,7 @@
   {
     "id": "HTTP Codes",
     "color": "#b40000",
+    "image": "http.png",
     "description": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Status codes are issued by a server in response to a client's request made to the server.",
     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
     "tags": ["web"],
@@ -473,6 +476,7 @@
   {
     "id": "Vim",
     "color": "#b40000",
+    "image": "vim.png",
     "description": "Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as 'vi' with most UNIX systems and with Apple OS X",
     "url": "https://www.vim.org/",
     "tags": ["editors", "terminals"],
@@ -986,6 +990,7 @@
   {
     "id": "Docker",
     "color": "#b40000",
+    "image": "docker.png",
     "description": "Docker is a software platform for building applications based on containers — small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.",
     "url": "https://www.docker.com/",
     "tags": ["devops", "cloud"],

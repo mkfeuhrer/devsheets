@@ -1,5 +1,8 @@
 <template>
   <div class="buttons">
+    <div>
+      <img :src="getImage()" alt width="150" height="150" />
+    </div>
     <p class="heading">{{capatalize(this.data.id)}}</p>
     <p>{{shortenDescription(this.data.description)}}</p>
     <div class="tag-section">
@@ -35,6 +38,9 @@ export default {
     },
     openDocs() {
       window.open(this.data.url + "?ref=devsheets", "_blank");
+    },
+    getImage() {
+      return require("../assets/" + this.data.image);
     },
   },
 };
