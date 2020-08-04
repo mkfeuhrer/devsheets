@@ -76,41 +76,41 @@ export default {
       popularList: [
         {
           command: "AFK ",
-          description: "Away From Keyboard"
+          description: "Away From Keyboard",
         },
         {
           command: "BRB ",
-          expanded_version: "Be Right Back"
+          expanded_version: "Be Right Back",
         },
         {
           command: "PHAT ",
-          description: "Pretty Hot And Tempting"
+          description: "Pretty Hot And Tempting",
         },
         {
           command: "TTYL ",
-          description: "Talk To You Later"
+          description: "Talk To You Later",
         },
         {
           command: "DIY ",
-          description: "Do It Yourself"
+          description: "Do It Yourself",
         },
         {
           command: "DND ",
-          description: "Do Not Disturb"
+          description: "Do Not Disturb",
         },
         {
           command: "WFH",
-          description: "Work From Home"
+          description: "Work From Home",
         },
         {
           command: "YOLO",
-          description: "You Only Live Once"
+          description: "You Only Live Once",
         },
         {
           command: "FOMO",
-          description: "Fear Of Missing Out"
-        }
-      ]
+          description: "Fear Of Missing Out",
+        },
+      ],
     };
   },
   created() {
@@ -124,14 +124,14 @@ export default {
         return [];
       }
       return this.acronymList
-        .filter(obj => {
+        .filter((obj) => {
           return obj.id.toLowerCase().includes(this.search.toLowerCase());
         })
         .sort((a, b) => (a.id > b.id ? 1 : -1));
     },
     itemNotFound() {
       return this.filteredList.length == 0;
-    }
+    },
   },
   methods: {
     homeItemSelected(value) {
@@ -144,14 +144,14 @@ export default {
     openGithub() {
       open("https://github.com/mkfeuhrer/devsheets");
       //   window.location.href = "https://github.com/mkfeuhrer/devsheets";
-    }
+    },
   },
   components: {
     AppHeader,
     AppFooter,
     Section,
-    OptionButton
-  }
+    OptionButton,
+  },
 };
 </script>
 

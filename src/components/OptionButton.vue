@@ -1,7 +1,7 @@
 <template>
   <div class="buttons">
     <div>
-      <img :src="getImage()" alt width="150" height="150" />
+      <img :src="getImage()" alt width="150" height="150" style="object-fit:contain;" />
     </div>
     <p class="heading">{{capatalize(this.data.id)}}</p>
     <p>{{shortenDescription(this.data.description)}}</p>
@@ -51,7 +51,7 @@ export default {
   width: 300px;
   height: auto;
   border: 2px solid gray;
-  margin: 10px;
+  margin: 20px 10px;
   padding: 10px;
   border-radius: 20px;
   display: flex;
