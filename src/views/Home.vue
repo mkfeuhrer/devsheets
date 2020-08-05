@@ -231,7 +231,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
 }
 
 .grayHighlight {

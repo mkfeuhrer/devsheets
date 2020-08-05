@@ -6,6 +6,9 @@
     <div class="searchBox">
       <input type="search" v-model="search" placeholder="Search this devsheet" />
     </div>
+    <div v-show="filteredList.length == 0">
+      <div class="grid">Ah snap 😵 Try something else!</div>
+    </div>
     <div v-show="filteredList.length > 0">
       <div class="grid">
         <div class="grid-elem left" style="font-weight: bold; color: #000;">Command</div>
@@ -64,7 +67,7 @@ export default {
       }
       return cheatsheet
         .filter((obj) => {
-          return obj.command
+          return obj.description
             .toString()
             .toLowerCase()
             .includes(this.search.toLowerCase());

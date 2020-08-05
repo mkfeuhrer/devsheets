@@ -4,7 +4,9 @@
       <img :src="getImage()" alt width="150" height="150" style="object-fit:contain;" />
     </div>
     <p class="heading">{{capatalize(this.data.id)}}</p>
-    <p>{{shortenDescription(this.data.description)}}</p>
+    <div class="description">
+      <p>{{shortenDescription(this.data.description)}}</p>
+    </div>
     <div class="tag-section">
       <div class="tag" v-for="(tag, index) in this.data.tags" :key="index">
         <span>#{{tag}}</span>
@@ -33,7 +35,7 @@ export default {
     },
     shortenDescription(value) {
       if (value == null) return "";
-      if (value.length > 90) return value.substring(0, 90) + " ...";
+      if (value.length > 90) return value.substring(0, 90) + "...";
       else return value;
     },
     openDocs() {
@@ -52,11 +54,12 @@ export default {
   height: auto;
   border: 2px solid gray;
   margin: 20px 10px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   box-shadow: -5px 5px 10px #aaa;
 }
@@ -67,10 +70,11 @@ export default {
   background-color: #fff;
   border: 2px solid black;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   transform: translateY(-3%);
   transition: transform 0.4s ease-in-out;
@@ -79,16 +83,23 @@ export default {
 .buttons .heading {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
 }
 
-.buttons p {
-  margin: 5px;
+.buttons .description {
+  margin: 2px;
+}
+
+.buttons .description p {
+  text-align: center;
 }
 
 .tag-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .tag {

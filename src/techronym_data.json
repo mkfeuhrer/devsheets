@@ -1112,5 +1112,83 @@
         "description": "Stop the running services gracefully and remove the containers later."
       }
     ]
+  },
+  {
+    "id": "NPM",
+    "color": "#b40000",
+    "image": "npm.png",
+    "description": "NPM is a package manager for the JavaScript and default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry",
+    "url": "https://www.docker.com/",
+    "tags": ["web"],
+    "cheatsheet": [
+      {
+        "command": "npm install <package-name> --save",
+        "description": "Installs a package and adds to dependencies"
+      },
+      {
+        "command": "npm install <package-name> --save-dev",
+        "description": "Installs a package and adds to dev dependencies"
+      },
+      {
+        "command": "npm install <package-name> --save-optional",
+        "description": "Installs a package and adds to optional dependencies"
+      },
+      {
+        "command": "npm install <package-name> --global",
+        "description": "Installs a package and adds globally"
+      },
+      {
+        "command": "npm uninstall <package-name>",
+        "description": "uninstalls and package"
+      },
+      {
+        "command": "npm update <package-name>",
+        "description": "updates a package with defined/latest version"
+      },
+      {
+        "command": "npm init",
+        "description": "create package.json"
+      },
+      {
+        "command": "npm ls",
+        "description": "list every package installed in current directory"
+      },
+      {
+        "command": "npm search <search-term>",
+        "description": "searches for package in current directory. Shows descriptio"
+      },
+      {
+        "command": "npm docs <package-name>",
+        "description": "opens documentation of the specified package"
+      },
+      {
+        "command": "npm publish <path-to-package>",
+        "description": "publishes package to npm directory"
+      },
+      {
+        "command": "npm unpublish <path-to-package>",
+        "description": "removes package to npm registry"
+      },
+      {
+        "command": "npm tag <package-name> <tag-name>",
+        "description": "adds tag to defined package"
+      },
+      {
+        "command": "npm outdated",
+        "description": "checks if any package is outdated"
+      },
+      {
+        "command": "npm dedupe <package-name>",
+        "description": "removes duplicate of the referenced packages"
+      },
+      {
+        "command": "npm run <script-name>",
+        "description": "runs a script defined in package.json. Eg start"
+      },
+      {
+        "command": "npm edit <package-name>",
+        "description": "edit the specified package"
+      }
+    ]
   }
 ]

@@ -2,13 +2,17 @@
   <div class="header">
     <div class="header-section">
       <div class="logo">
-        <img style="margin-right: 5px;" src="../assets/devsheet.svg" width="100" height="100" alt />
+        <img style="margin-right: 5px;" src="../assets/devsheet.svg" width="75" height="75" alt />
+      </div>
+      <div>
         <p class="routes">Devsheet</p>
       </div>
-
-      <div class="dev-description">
-        <p>Quickly find the best cheatsheets for everything tech.</p>
-      </div>
+    </div>
+    <div class="dev-description">
+      <p>
+        Quickly find the best cheatsheets for everything tech 💻
+        <br />Search 🔎 Copy 📄 Share 💙
+      </p>
     </div>
   </div>
 </template>
@@ -24,7 +28,7 @@ export default {};
 
 .header-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -34,11 +38,12 @@ export default {};
   margin-bottom: 10px;
 }
 
-.logo p {
-  margin-top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #555;
+.routes {
+  font-family: "Roboto", Helvetica, sans-serif;
+  margin-left: 2px;
+  color: #cc0000ea;
+  font-size: 52px;
+  font-weight: 500;
 }
 
 .dev-description {
