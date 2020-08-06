@@ -54,7 +54,10 @@ export default {
   height: auto;
   border: 2px solid gray;
   margin: 20px 10px;
-  padding: 5px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
