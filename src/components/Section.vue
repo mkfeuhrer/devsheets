@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import json from "../techronym_data.json";
+import json from "../devsheet_data.json";
 
 function copyText(text) {
   var input = document.createElement("textarea");

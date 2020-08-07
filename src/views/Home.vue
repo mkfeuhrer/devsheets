@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import json from "../techronym_data.json";
+import json from "../devsheet_data.json";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import Section from "@/components/Section.vue";

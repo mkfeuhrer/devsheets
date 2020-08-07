@@ -5,7 +5,7 @@
         <img style="margin-right: 5px;" src="../assets/devsheet.svg" width="75" height="75" alt />
       </div>
       <div>
-        <p class="routes">Devsheet</p>
+        <p class="routes">Devsheets</p>
       </div>
     </div>
     <div class="dev-description">
