@@ -12,6 +12,32 @@ export default {
   components: {
     Home,
   },
+  meta: [
+    {
+      name: "keywords",
+      content:
+        "devsheets, devsheet, cheatsheet, dev cheatsheets, tech cheatsheets, developers guide",
+    },
+    {
+      name: "description",
+      content: "Quickly find the best cheatsheets for everything tech",
+    },
+    {
+      name: "subject",
+      content: "Quickly find the best cheatsheets for everything tech",
+    },
+    { name: "author", content: "@mkfeuhrer" },
+    { name: "url", content: "https://mohitkhare.me/devsheets" },
+    { name: "og:title", content: "Devsheets" },
+    { name: "og:site_name", content: "Devsheets" },
+    { name: "og:type", content: "website" },
+    { name: "og:url", content: "https://mohitkhare.me/devsheets" },
+    {
+      name: "og:description",
+      content:
+        "Quickly find the best cheatsheets for everything tech. Search 🔎 Copy 📄 Share 💙 commands with one line explanation.",
+    },
+  ],
 };
 </script>
 
