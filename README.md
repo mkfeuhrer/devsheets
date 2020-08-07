@@ -1,7 +1,7 @@
 # Devsheets
 
 <p align="center">
-<img alt="devsheets" title="Devsheets" src="https://raw.githubusercontent.com/mkfeuhrer/devsheets/master/devsheet-demo.png" width="700" height="auto" />
+<img alt="devsheets" title="Devsheets" src="https://raw.githubusercontent.com/mkfeuhrer/devsheets/master/devsheet-demo.png?token=AD2C5JYCXSA36KAJCPV5ZR27GZ3XS" width="700" height="auto" />
 </p>
 
 [![Website Devsheets](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://mohitkhare.me/devsheets)
