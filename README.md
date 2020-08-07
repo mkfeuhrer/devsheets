@@ -67,10 +67,6 @@ Star and share!
 
 ## Connect
 
-[![Twitter][1.1]][1]
-[![Github][6.1]][6]
-
-[1.1]: http://i.imgur.com/tXSoThF.png "Twitter"
-[6.1]: http://i.imgur.com/0o48UoR.png "Github"
-[1]: http://www.twitter.com/mkfeuhrer
-[6]: http://www.github.com/mkfeuhrer
+<a style="margin: 0px 3px;" href="https://twitter.com/mkfeuhrer" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="mkfeuhrer" height="25" width="25" /> </a>
+<a style="margin: 2px;" href="https://github.com/mkfeuhrer" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="mkfeuhrer" height="25" width="25" /> </a>
+<a style="margin: 2px;" href="https://linkedin.com/in/mohitkhare1996" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Mohit Khare" height="25" width="25" /> </a>
