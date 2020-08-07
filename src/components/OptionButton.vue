@@ -73,7 +73,10 @@ export default {
   background-color: #fff;
   border: 2px solid black;
   margin: 10px;
-  padding: 5px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
