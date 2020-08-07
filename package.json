@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.15.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-analytics": "^5.22.1",
     "vue-meta": "^2.4.0",
     "vue-page-transition": "^0.2.2",
     "vue-router": "^3.3.4"

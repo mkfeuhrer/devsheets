@@ -1,5 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
+
+import VueAnalytics from "vue-analytics";
 import VuePageTransition from "vue-page-transition";
 import VueMeta from "vue-meta";
 
@@ -13,6 +15,11 @@ Vue.config.productionTip = false;
 
 Vue.use(VuePageTransition);
 Vue.use(VueMeta);
+
+Vue.use(VueAnalytics, {
+  id: "UA-131120430-5",
+  router,
+});
 
 new Vue({
   router,
