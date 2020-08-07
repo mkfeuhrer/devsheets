@@ -34,7 +34,7 @@
         <p>
           Couldn't find Cheatsheet?
           <a
-            href="https://github.com/mkfeuhrer/devsheet"
+            href="https://github.com/mkfeuhrer/devsheets"
             class
             target="blank"
           >Contribute</a>
