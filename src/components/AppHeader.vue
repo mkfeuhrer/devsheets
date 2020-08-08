@@ -14,6 +14,20 @@
         <br />Search 🔎 Copy 📄 Share 💙
       </p>
     </div>
+    <div class="phcard">
+      <a
+        href="https://www.producthunt.com/posts/devsheets?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-devsheets"
+        target="_blank"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=229699&theme=light"
+          alt="Devsheets - Quickly find cheatsheets for everything tech  | Product Hunt Embed"
+          style="width: 240px; height: 50px;"
+          width="250px"
+          height="54px"
+        />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -49,6 +63,11 @@ export default {};
 .dev-description {
   margin-top: 5px;
   line-height: 24px;
+}
+
+.phcard {
+  margin: 5px 0px;
+  padding: 5px;
 }
 
 .dev-description p {
