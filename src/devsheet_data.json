@@ -1190,5 +1190,123 @@
         "description": "edit the specified package"
       }
     ]
+  },
+  {
+    "id": "Golang",
+    "color": "#b40000",
+    "image": "go.png",
+    "description": "Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.",
+    "url": "https://golang.org/",
+    "tags": ["programming, backend"],
+    "cheatsheet": [
+      {
+        "command": "go bug",
+        "description": "start a bug report"
+      },
+      {
+        "command": "go build <package>",
+        "description": "compile packages and dependencies"
+      },
+      {
+        "command": "go clean <package>",
+        "description": "remove object files and cached files"
+      },
+      {
+        "command": "go doc",
+        "description": "show documentation for current package"
+      },
+      {
+        "command": "go doc <package>",
+        "description": "show documentation for package"
+      },
+      {
+        "command": "go env",
+        "description": "print Go environment information"
+      },
+      {
+        "command": "go fix",
+        "description": "update packages to use new APIs"
+      },
+      {
+        "command": "go help <command>",
+        "description": "get information about a command"
+      },
+      {
+        "command": "go fmt",
+        "description": "format go programs. Read more - https://golang.org/cmd/gofmt/"
+      },
+      {
+        "command": "go get <url-to-package>",
+        "description": "download and install packages and dependencies. Eg. go get github.com/urfave/cli"
+      },
+      {
+        "command": "go install",
+        "description": "compile and install packages and dependencies"
+      },
+      {
+        "command": "go list",
+        "description": "list packages or modules used in current project"
+      },
+      {
+        "command": "go mod",
+        "description": "module maintenance"
+      },
+      {
+        "command": "go mod init",
+        "description": "initialize new module  with the go.mod and go.sum file in current project."
+      },
+      {
+        "command": "go mod tidy",
+        "description": "add missing and remove unused modules"
+      },
+      {
+        "command": "go mod graph",
+        "description": "Print module requirement graph"
+      },
+      {
+        "command": "go run <file.go>",
+        "description": "compile and run Go program (with main)"
+      },
+      {
+        "command": "go test <package>",
+        "description": "runs test for defined package or if not then runs tests for current package."
+      },
+      {
+        "command": "go version",
+        "description": "print current Go version"
+      },
+      {
+        "command": "go vet",
+        "description": "report likely mistakes in packages"
+      },
+      {
+        "command": "GOROOT",
+        "description": "path to where the Go standard library is located on your local filesystem. Default - /usr/local/go"
+      },
+      {
+        "command": "GOBIN",
+        "description": "path to where your Go binaries are installed from running go install. Default -  $GOPATH/bin"
+      },
+      {
+        "command": "GOOS",
+        "description": "tells the processor architechture"
+      },
+      {
+        "command": "GOPATH",
+        "description": "path to your workspace. It is a required config (has no default value)."
+      },
+      {
+        "command": "GOPROXY",
+        "description": "URL of Go module proxy. You can set it as https://proxy.golang.org"
+      },
+      {
+        "command": "GOBIN",
+        "description": "directory where \"go install\" will install a command"
+      },
+      {
+        "command": "GO111MODULE=on <command>",
+        "description": "when you want to select specific version of package inside a GOPATH package. Works with go.mod"
+      }
+    ]
   }
 ]
