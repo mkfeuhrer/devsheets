@@ -4,7 +4,7 @@
 <img alt="devsheets" title="Devsheets" src="https://raw.githubusercontent.com/mkfeuhrer/devsheets/master/devsheet-demo.png?token=AD2C5JYCXSA36KAJCPV5ZR27GZ3XS" width="700" height="auto" />
 </p>
 
-[![Website Devsheets](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://mohitkhare.me/devsheets)
+[![Website Devsheets](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://devsheets.vercel.app)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/mkfeuhrer/devsheets/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/mkfeuhrer/devsheets/blob/master/LICENSE)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/mkfeuhrer/devsheets/)
@@ -15,7 +15,7 @@ This helps to quickly find all the commands at one place. This is something I bu
 
 You can easily 🔎 Search,📄 Copy and 💙 Share them.
 
-Check it out - [Devsheets](https://mohitkhare.me/devsheets)
+Check it out - [Devsheets](https://devsheets.vercel.app)
 
 #### Built with Vue ❤️️
 
@@ -63,7 +63,7 @@ Star and share!
 
 ## Author
 
-- [Mohit Khare](https://mohitkhare.me)
+- [Mohit Khare](https://mohitkhare.com)
 
 ## Connect
 
