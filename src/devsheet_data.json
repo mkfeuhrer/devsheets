@@ -1,5 +1,17 @@
 [
   {
+    "id": "django",
+    "color": "#092d1f",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRE3E-aFhgiuGFzhMcY7Gs9VL8XFbl_AJ7jCA&usqp=CAU",
+    "description": "Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. For developers with deadlines",
+    "url": "https://www.djangoproject.com/",
+    "tags": ["web", "backend", "web framework", "python"]
+    "cheatsheet": [
+      "command": "python manage.py createsuperuser",
+      "description": "Create a superuser in Django",
+    ]
+  },
+  {
     "id": "redis",
     "color": "#b40000",
     "image": "redis.png",
