@@ -1138,8 +1138,28 @@
         "description": "Installs a package and adds globally"
       },
       {
+        "command": "npm install <package-name> --package-lock-only",
+        "description": "Removes package-lock merge conflicts. NOTE: Works for npm>=5.7.0. Before running this resolve merge conflicts in package.json if any"
+      },
+      {
         "command": "npm uninstall <package-name>",
         "description": "uninstalls and package"
+      },
+      {
+        "command": "npm uninstall <package-name> --save",
+        "description": "uninstalls and package and removes from dependencies in package.json"
+      },
+      {
+        "command": "npm uninstall <package-name> --save-dev",
+        "description": "uninstalls and package and removes from devDependencies in package.json"
+      },
+      {
+        "command": "npm uninstall <package-name> --save-optional",
+        "description": "uninstalls and package and removes from optionalDependencies in package.json"
+      },
+      {
+        "command": "npm uninstall <package-name> --no-save",
+        "description": "uninstalls and package and doesn't remove from package.json"
       },
       {
         "command": "npm update <package-name>",
@@ -1155,7 +1175,7 @@
       },
       {
         "command": "npm search <search-term>",
-        "description": "searches for package in current directory. Shows descriptio"
+        "description": "searches for package in current directory. Shows description"
       },
       {
         "command": "npm docs <package-name>",
